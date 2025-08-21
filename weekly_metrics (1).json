@@ -1,0 +1,802 @@
+[
+  {
+    "week": "Week 8",
+    "metric": "Treatment plant tasks > Routine tasks",
+    "value": 24.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Reactive / Unscheduled tasks",
+    "value": 11.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Remote tasks",
+    "value": 9.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Reservoir tasks > Routine tasks > Break tank maintenance (x1 tank) aslo completed this week",
+    "value": 4.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Reactive / Unsheduled",
+    "value": 0.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Remote",
+    "value": 0.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Water samples > Due this week",
+    "value": 49.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Taken this week",
+    "value": 47.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Staff hours > Total hours worked > Lower hours due to Eli Bull on ACC, partial return to work (6 hrs worked this week)",
+    "value": 255.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Call Outs > Total number of call-outs",
+    "value": 0.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Plant inspections > Number of routine tasks completed",
+    "value": 19.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Number of other tasks completed (reactive/unscheduled)",
+    "value": 5.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Number of remote tasks completed",
+    "value": 0.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Reticulation > New connections completed",
+    "value": 2.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Water leak repairs completed",
+    "value": 36.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Total reactive tasks completed (CSRs closed)",
+    "value": 17.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Routine maintenance tasks completed (via internal service requests or Water Outlook reticulation plant) > This work includes various internal service requests and routine network equipment checks such as valve, PRV, PSV, screen maintenance work.",
+    "value": 49.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Staff hours > Total hours worked",
+    "value": 328.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Call Outs > Total number of call-outs",
+    "value": 3.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Water outages > Total number of water outages",
+    "value": 0.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Wastewater plant tasks > Routine tasks",
+    "value": 13.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Reactive / Unscheduled tasks",
+    "value": 5.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Wastewater reticulation > Routine tasks > Amberley Flushing Zone 3&4, L/Beach & Amb Beach Flushing tanks",
+    "value": 28.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Number of wastewater overflows",
+    "value": 0.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Total number of Reactive / Unscheduled tasks > MH Inspections",
+    "value": 2.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Wastewater Routine sampling > Number of samples due > Motunau, Hanmer Bores",
+    "value": 8.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Number of samples completed",
+    "value": 8.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Staff hours > Total hours worked",
+    "value": 254.25
+  },
+  {
+    "week": "Week 8",
+    "metric": "Call Outs > Total number of call-outs",
+    "value": 0.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Stormwater > Routine tasks > 1 inspections, 1 drain maintenance (3 Days)",
+    "value": 3.0
+  },
+  {
+    "week": "Week 8",
+    "metric": "Reactive / Unscheduled tasks > CSR - Kellaway Terrace",
+    "value": 1.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Treatment plant tasks > Routine tasks",
+    "value": 20.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Reactive / Unscheduled tasks",
+    "value": 7.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Remote tasks",
+    "value": 4.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Reservoir tasks > Routine tasks",
+    "value": 4.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Reactive / Unsheduled",
+    "value": 0.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Remote",
+    "value": 0.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Water samples > Due this week",
+    "value": 43.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Taken this week",
+    "value": 43.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Treatment plant critical alarms > Critical > Racecourse (1), Amuri (5), Balmoral (1), Blythe (3), Hanmer (1), Hurunui (6), Kaiwara (1),",
+    "value": 18.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Staff hours > Total hours worked > Lower hours due to staff sick leave.  Eli Bull, ACC (-40hrs)",
+    "value": 225.5
+  },
+  {
+    "week": "Week 7",
+    "metric": "Call Outs > Total number of call-outs",
+    "value": 0.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Plant inspections > Number of routine tasks completed",
+    "value": 6.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Number of other tasks completed (reactive/unscheduled)",
+    "value": 4.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Number of remote tasks completed",
+    "value": 0.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Reticulation > New connections completed",
+    "value": 1.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Water leak repairs completed",
+    "value": 38.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Total reactive tasks completed (CSRs closed)",
+    "value": 29.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Routine maintenance tasks completed (via internal service requests or Water Outlook reticulation plant)",
+    "value": 22.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Staff hours > Total hours worked",
+    "value": 360.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Call Outs > Total number of call-outs",
+    "value": 1.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Water outages > Total number of water outages",
+    "value": 3.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Wastewater plant tasks > Routine tasks > From Water Outlook",
+    "value": 11.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Reactive / Unscheduled tasks > From Water Outlook",
+    "value": 9.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Remote tasks",
+    "value": 0.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Wastewater reticulation > Routine tasks > 4x MH inspections, Waikari",
+    "value": 4.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Number of wastewater overflows",
+    "value": 0.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Total number of Reactive / Unscheduled tasks",
+    "value": 0.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Wastewater Routine sampling > Number of samples due",
+    "value": 0.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Number of samples completed",
+    "value": 0.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Staff hours > Total hours worked > Michelle off sick for 4 days, waiting outcome on LWOP",
+    "value": 241.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Call Outs > Total number of call-outs",
+    "value": 0.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Stormwater > Routine tasks > L/Beach Outfall, Kelaway Terrace",
+    "value": 2.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Reactive / Unscheduled tasks > Kings Road drain, Construct Auto Sampler chamber & 2 days STMS assistance",
+    "value": 4.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Rejetting > Ashley Scheme - Loburn",
+    "value": 22.0
+  },
+  {
+    "week": "Week 7",
+    "metric": "Reactive / Unscheduled tasks",
+    "value": 0.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Treatment plant tasks > Routine tasks",
+    "value": 19.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Reactive / Unscheduled tasks > Hurunui #1 (6)",
+    "value": 14.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Remote tasks",
+    "value": 6.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Reservoir tasks > Routine tasks",
+    "value": 6.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Reactive / Unsheduled",
+    "value": 1.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Remote",
+    "value": 0.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Water samples > Due this week",
+    "value": 25.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Taken this week",
+    "value": 25.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Treatment plant critical alarms > Critical",
+    "value": 38.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Staff hours > Total hours worked",
+    "value": 226.5
+  },
+  {
+    "week": "Week 6",
+    "metric": "Call Outs > Total number of call-outs > Low worked hours due to Eli ACC (-40hrs)",
+    "value": 0.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Plant inspections > Number of routine tasks completed",
+    "value": 6.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Number of other tasks completed (reactive/unscheduled)",
+    "value": 9.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Number of remote tasks completed",
+    "value": 2.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Reticulation > New connections completed",
+    "value": 0.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Water leak repairs completed > The count for this category should include all leaks, including toby leaks and hydrants,.",
+    "value": 24.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Total reactive tasks completed (CSRs closed)",
+    "value": 23.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Routine maintenance tasks completed (via internal service requests or Water Outlook reticulation plant)",
+    "value": 69.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Staff hours > Total hours worked",
+    "value": 394.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Call Outs > Total number of call-outs",
+    "value": 0.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Water outages > Total number of water outages",
+    "value": 0.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Wastewater plant tasks > Routine tasks > From Water Outlook",
+    "value": 9.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Reactive / Unscheduled tasks > From Water Outlook",
+    "value": 1.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Remote tasks",
+    "value": 0.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Wastewater reticulation > Routine tasks > 2 x Sewer tank Flushes, Ashley Country flushes, Leithfield , Watties Rd. 4x MH inspections",
+    "value": 9.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Number of wastewater overflows",
+    "value": 0.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Total number of Reactive / Unscheduled tasks > Cheviot",
+    "value": 1.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Wastewater Routine sampling > Number of samples due > 2 sets of sampling in Cheviot",
+    "value": 6.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Number of samples completed",
+    "value": 6.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Staff hours > Total hours worked > 16 LWOP - Michelle sick with no sick leave available",
+    "value": 242.75
+  },
+  {
+    "week": "Week 6",
+    "metric": "Call Outs > Total number of call-outs > L/Beach Outfall, Hawarden & Amberley Visual inspections while responding to CSR 's",
+    "value": 0.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Stormwater > Routine tasks > Fernihurst, Waiau 2days and 2 mor next week, Kings Road, Les Smart Drain,",
+    "value": 5.0
+  },
+  {
+    "week": "Week 6",
+    "metric": "Reactive / Unscheduled tasks > Kings Road drain to Ashworths Rd",
+    "value": 1.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Treatment plant tasks > Routine tasks",
+    "value": 18.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Reactive / Unscheduled tasks > Hurunui #1 (6), Kowai (1), Racecourse (3), Ashley (1), Hanmer (1)",
+    "value": 12.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Remote tasks > Kaiwara - remote restart utilised while improvements underway at Random Spur and with plant programming to smooth intake/plant operation. Ashley plant setpoints adjustments, Racecourse Road remote changes due to excessive bore drawdown.",
+    "value": 13.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Reservoir tasks > Routine tasks",
+    "value": 3.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Reactive / Unsheduled > Random Spur, complete testing of the electric valve, chlorination of the reservoir set and test placing reservoirs in to service. Tests proved unsucessful, pipework and ancilary equipment changes required.",
+    "value": 1.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Remote",
+    "value": 0.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Water samples > Due this week",
+    "value": 43.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Taken this week",
+    "value": 41.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Treatment plant critical alarms > Critical > Kaiwara(3) , Racecourse (16), Ashley (3), Parnassus (1)",
+    "value": 23.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Staff hours > Total hours worked > Low worked hours due to Eli ACC (-40hrs)",
+    "value": 247.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Call Outs > Total number of call-outs",
+    "value": 0.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Plant inspections > Number of routine tasks completed",
+    "value": 11.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Number of other tasks completed (reactive/unscheduled) > Water Outlook reports yet to be configured",
+    "value": 0.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Number of remote tasks completed > Water Outlook reports yet to be configured",
+    "value": 0.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Total reactive tasks completed (CSRs closed)",
+    "value": 25.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Routine maintenance tasks completed (via internal service requests or Water Outlook reticulation plant) > Water Outlook reports yet to be configured/internal service requests are manually captured (e.g. no electronic reporting mechanism)",
+    "value": 82.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Staff hours > Total hours worked",
+    "value": 399.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Call Outs > Total number of call-outs > Plant call out (4), Ashley no water, Lower Waitohi no water, Leithfield rural 110mm blowout, Parnassus 100mm blowout, Paranssus no water.",
+    "value": 10.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Water outages > Total number of water outages > Breif outages in Waiau Rural(Emu plains), Hurunui #1, Leithfeild Rural, Ashley. Regular outages in Kaiwara due to treatment plant/Random Spur/Mt John pipe and reservoir configuration issues.",
+    "value": 5.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Wastewater plant tasks > Routine tasks",
+    "value": 14.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Reactive / Unscheduled tasks",
+    "value": 5.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Remote tasks",
+    "value": 0.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Wastewater reticulation > Routine tasks > Sewer tank Flushes - Amberley & Leithfield Beach",
+    "value": 10.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Number of wastewater overflows > Hawarden treatment plant",
+    "value": 1.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Total number of Reactive / Unscheduled tasks",
+    "value": 0.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Wastewater Routine sampling > Number of samples due",
+    "value": 5.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Number of samples completed > Waikari & Hanmer",
+    "value": 5.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Staff hours > Total hours worked > 8 Leave",
+    "value": 257.25
+  },
+  {
+    "week": "Week 5",
+    "metric": "Call Outs > Total number of call-outs",
+    "value": 0.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Stormwater > Routine tasks > L/Beach Outfall, Hawarden & Amberley Visual inspections while responding to CSR 's",
+    "value": 3.0
+  },
+  {
+    "week": "Week 5",
+    "metric": "Reactive / Unscheduled tasks > Hawarden Drain x1, Leithfield Beach x2",
+    "value": 3.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Treatment plant tasks > Routine tasks",
+    "value": 19.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Reactive / Unscheduled tasks",
+    "value": 17.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Remote tasks",
+    "value": 11.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Reservoir tasks > Routine tasks",
+    "value": 4.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Reactive / Unsheduled",
+    "value": 0.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Remote",
+    "value": 0.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Water samples > Due this week",
+    "value": 36.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Taken this week",
+    "value": 37.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Treatment plant critical alarms > Critical > 11 (Amuri x 5), Ashley (x 4), Hanmer (x1)",
+    "value": 11.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Staff hours > Total hours worked > Hours may be inacurate due to Datascape reporting constraints",
+    "value": 265.5
+  },
+  {
+    "week": "Week 4",
+    "metric": "Call Outs > Total number of call-outs",
+    "value": 0.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Plant inspections > Number of routine tasks completed",
+    "value": 6.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Number of other tasks completed (reactive/unscheduled) > Water Outlook weekly reporting is currently under development",
+    "value": 0.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Number of remote tasks completed > Water Outlook weekly reporting is currently under development",
+    "value": 0.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Reticulation > Reactive tasks completed (CSRs closed)",
+    "value": 36.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Routine maintenance tasks completed (via internal service requests or Water Outlook reticulation plant) > Water Outllook is under development to record this information due to Internal Service Request module unavailability in Datascape",
+    "value": 0.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Staff hours > Total hours worked > Hours may be inacurate due to Datascape reporting constraints",
+    "value": 360.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Call Outs > Total number of call-outs > Kowai Bridge leak, low flow at Amberley Beach",
+    "value": 2.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Water outages > Total number of water outages",
+    "value": 2.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Wastewater plant tasks > Routine tasks",
+    "value": 11.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Reactive / Unscheduled tasks",
+    "value": 1.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Remote tasks",
+    "value": 0.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Wastewater reticulation > Routine tasks",
+    "value": 9.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Reactive / Unscheduled tasks",
+    "value": 3.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Wastewater Routine sampling > Number of samples due",
+    "value": 3.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Number of samples completed",
+    "value": 3.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Staff hours > Total hours worked > Hours may be inacurate due to Datascape reporting constraints",
+    "value": 295.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Call Outs > Total number of call-outs",
+    "value": 0.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Stormwater > Routine tasks",
+    "value": 1.0
+  },
+  {
+    "week": "Week 4",
+    "metric": "Reactive / Unscheduled tasks",
+    "value": 1.0
+  }
+]
