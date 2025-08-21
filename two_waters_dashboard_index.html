@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Three Waters – Weekly Operations Dashboard</title>
+  <style>
+    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#f7f7f8; margin:0; color:#111;}
+    .container{max-width:1200px; margin:0 auto; padding:24px;}
+    .card{background:#fff; border:1px solid #e5e7eb; border-radius:16px; box-shadow:0 1px 2px rgba(0,0,0,.04); margin-bottom:16px;}
+    .card .content{padding:16px;}
+    h1{font-size:22px; margin:0 0 8px;}
+    .row{display:flex; gap:12px; align-items:center; flex-wrap:wrap;}
+    input[type="file"], input[type="text"]{padding:8px; border:1px solid #d1d5db; border-radius:8px;}
+    button{padding:8px 12px; border-radius:8px; border:1px solid #111; background:#111; color:#fff; cursor:pointer;}
+    button:disabled{opacity:.5; cursor:not-allowed;}
+    select{padding:8px; border:1px solid #d1d5db; border-radius:8px;}
+    table{width:100%; border-collapse:collapse;}
+    th, td{padding:8px; border-top:1px solid #eee; text-align:left;}
+    .kpi{flex:1 1 220px; border:1px solid #eee; border-radius:16px; padding:12px;}
+    .kpi .label{font-size:12px; color:#6b7280;}
+    .kpi .value{font-size:24px; font-weight:600;}
+    .muted{color:#6b7280; font-size:12px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="justify-content:space-between;">
+      <h1>Three Waters – Weekly Operations Dashboard</h1>
+      <div id="status" class="muted">No data loaded</div>
+    </div>
+
+    <div class="card"><div class="content">
+      <div class="row">
+        <div>
+          <div class="muted">Upload weekly JSON</div>
+          <input id="file" type="file" accept="application/json"/>
+        </div>
+        <div class="row">
+          <input id="url" type="text" placeholder="https://…/weekly_metrics.json" style="min-width:360px;"/>
+          <button id="loadUrl">Load URL</button>
+          <div class="muted">Tip: share a bookmark with <code>?data=PUBLIC_JSON_URL</code></div>
+        </div>
+      </div>
+    </div></div>
+
+    <div id="controls" class="card" style="display:none;"><div class="content">
+      <div class="row">
+        <div>
+          <div class="muted">Metric</div>
+          <select id="metric"></select>
+        </div>
+        <div>
+          <div class="muted">From week</div>
+          <select id="from"></select>
+        </div>
+        <div>
+          <div class="muted">To week</div>
+          <select id="to"></select>
+        </div>
+        <div>
+          <div class="muted">Filter (leaderboard)</div>
+          <input id="filter" type="text" placeholder="e.g., Pump station inspections"/>
+        </div>
+      </div>
+    </div></div>
+
+    <div class="row" id="kpis" style="display:none; gap:16px;"></div>
+
+    <div id="trendCard" class="card" style="display:none;"><div class="content">
+      <div class="row" style="justify-content:space-between; margin-bottom:8px;">
+        <div id="trendTitle" style="font-weight:600;">Trend</div>
+        <div class="muted" id="trendRange"></div>
+      </div>
+      <div id="trend" style="width:100%; height:360px;"></div>
+    </div></div>
+
+    <div id="leader" class="card" style="display:none;"><div class="content">
+      <div class="row" style="justify-content:space-between; margin-bottom:8px;">
+        <div style="font-weight:600;">Latest week leaderboard</div>
+        <div class="muted" id="leaderSub"></div>
+      </div>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead><tr><th>Metric</th><th style="text-align:right;">Value</th></tr></thead>
+          <tbody id="leaderRows"></tbody>
+        </table>
+      </div>
+    </div></div>
+
+    <div class="card"><div class="content muted">
+      <div style="font-weight:600; color:#374151;">Weekly update workflow</div>
+      <ol>
+        <li>Export JSON with rows like: <code>[{`{`} week, metric, value {`}`}]</code>.</li>
+        <li>Upload the JSON or host it at a public URL and click <b>Load URL</b>.</li>
+        <li>Optional: share a bookmark using <code>?data=PUBLIC_JSON_URL</code>.</li>
+      </ol>
+    </div></div>
+  </div>
+
+  <!-- React, ReactDOM, Recharts via UMD CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+
+  <script>
+  (function(){
+    const E = React.createElement;
+    const { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } = Recharts;
+
+    const statusEl = document.getElementById('status');
+    const fileEl = document.getElementById('file');
+    const urlEl = document.getElementById('url');
+    const loadBtn = document.getElementById('loadUrl');
+
+    const controls = document.getElementById('controls');
+    const metricSel = document.getElementById('metric');
+    const fromSel = document.getElementById('from');
+    const toSel = document.getElementById('to');
+    const filterEl = document.getElementById('filter');
+
+    const kpis = document.getElementById('kpis');
+    const trendCard = document.getElementById('trendCard');
+    const trendTitle = document.getElementById('trendTitle');
+    const trendRange = document.getElementById('trendRange');
+    const trendMount = document.getElementById('trend');
+
+    const leader = document.getElementById('leader');
+    const leaderSub = document.getElementById('leaderSub');
+    const leaderRows = document.getElementById('leaderRows');
+
+    let rows = [];
+    let weeks = [];
+    let metrics = [];
+
+    function uniq(arr){ return Array.from(new Set(arr)); }
+    function weekSort(a,b){
+      const na = parseInt(String(a).replace(/\D/g,''))||0;
+      const nb = parseInt(String(b).replace(/\D/g,''))||0;
+      return na-nb;
+    }
+
+    function setStatus(t){ statusEl.textContent = t; }
+
+    function parseAndSet(text){
+      try{
+        const data = JSON.parse(text);
+        if(!Array.isArray(data)) throw new Error('JSON must be an array');
+        const ok = data.every(d => typeof d.week==='string' && typeof d.metric==='string' && (typeof d.value==='number' || typeof d.value==='string'));
+        if(!ok) throw new Error('Rows must be {week, metric, value}');
+        rows = data.map(d => ({...d, value: Number(d.value)}));
+        weeks = uniq(rows.map(r=>r.week)).sort(weekSort);
+        metrics = uniq(rows.map(r=>r.metric)).sort();
+        setStatus('Loaded ' + rows.length + ' rows');
+        mountUI();
+      }catch(e){
+        alert('Could not parse JSON: ' + e.message);
+        setStatus('Invalid JSON');
+      }
+    }
+
+    async function loadFromUrl(url){
+      try{
+        setStatus('Loading…');
+        const res = await fetch(url);
+        if(!res.ok) throw new Error(res.status + ' ' + res.statusText);
+        const text = await res.text();
+        parseAndSet(text);
+      }catch(e){
+        alert("Couldn't load URL: " + e.message);
+        setStatus('Load failed');
+      }
+    }
+
+    fileEl.addEventListener('change', async (ev)=>{
+      const f = ev.target.files?.[0];
+      if(!f) return;
+      const text = await f.text();
+      parseAndSet(text);
+    });
+    loadBtn.addEventListener('click', ()=>{
+      const u = urlEl.value.trim();
+      if(u) loadFromUrl(u);
+    });
+
+    // Auto-load ?data=…
+    const params = new URLSearchParams(location.search);
+    if(params.get('data')){
+      urlEl.value = params.get('data');
+      loadFromUrl(params.get('data'));
+    }
+
+    // ----- UI -----
+    function mountUI(){
+      if(rows.length===0){ controls.style.display='none'; trendCard.style.display='none'; kpis.style.display='none'; leader.style.display='none'; return; }
+      controls.style.display='block';
+
+      // populate selects
+      metricSel.innerHTML = metrics.map(m=>`<option>${m}</option>`).join('');
+      fromSel.innerHTML = weeks.map(w=>`<option>${w}</option>`).join('');
+      toSel.innerHTML = weeks.map(w=>`<option>${w}</option>`).join('');
+      metricSel.value = metrics[0];
+      fromSel.value = weeks[0];
+      toSel.value = weeks[weeks.length-1];
+      filterEl.value = '';
+
+      renderAll();
+      metricSel.onchange = renderAll;
+      fromSel.onchange = renderAll;
+      toSel.onchange = renderAll;
+      filterEl.oninput = renderAll;
+    }
+
+    function filteredWeeks(){
+      const si = weeks.indexOf(fromSel.value);
+      const ei = weeks.indexOf(toSel.value);
+      if(si<0 || ei<0) return weeks;
+      return weeks.slice(Math.max(0,si), Math.max(si,ei)+1);
+    }
+
+    function renderAll(){
+      const fw = filteredWeeks();
+      const metric = metricSel.value;
+      const trendData = fw.map(w=>{
+        const v = rows.filter(r=>r.week===w && r.metric===metric).reduce((s,r)=>s+(Number(r.value)||0),0);
+        return { week:w, value: Number(v.toFixed(3)) };
+      });
+
+      // KPIs
+      const slice = rows.filter(r=>fw.includes(r.week));
+      const sum = pred => slice.filter(pred).reduce((s,r)=>s+(Number(r.value)||0),0);
+      const kpiData = [
+        {label:'Completed routine tasks', value: sum(r=>r.metric.includes('Routine tasks'))},
+        {label:'Reactive tasks', value: sum(r=>r.metric.includes('Reactive'))},
+        {label:'Pump station inspections', value: sum(r=>r.metric.includes('Pump station inspections'))},
+        {label:'Median response time (hrs)', value: Number((sum(r=>r.metric.includes('Median response time'))/fw.length || 0).toFixed(2))}
+      ];
+      kpis.style.display='flex';
+      kpis.innerHTML = kpiData.map(k=>`<div class="kpi"><div class="label">${k.label}</div><div class="value">${k.value.toLocaleString()}</div><div class="muted">Across ${fw.length} week(s)</div></div>`).join('');
+
+      // Trend
+      trendCard.style.display='block';
+      trendTitle.textContent = 'Trend – ' + metric;
+      trendRange.textContent = 'Weeks ' + fw[0] + ' to ' + fw[fw.length-1];
+
+      ReactDOM.render(
+        E(ResponsiveContainer, {width:'100%', height:340},
+          E(LineChart, {data: trendData, margin:{top:10, right:20, bottom:0, left:0}},
+            E(CartesianGrid, {strokeDasharray:'3 3'}),
+            E(XAxis, {dataKey:'week'}),
+            E(YAxis, {allowDecimals:true}),
+            E(Tooltip, null),
+            E(Line, {type:'monotone', dataKey:'value', strokeWidth:2, dot:true})
+          )
+        ),
+        trendMount
+      );
+
+      // Leaderboard
+      leader.style.display='block';
+      leaderSub.textContent = 'Top 12 matching "' + (filterEl.value || '') + '"';
+      const latest = fw[fw.length-1];
+      const totals = new Map();
+      rows.filter(r=>r.week===latest).forEach(r=>{
+        totals.set(r.metric, (totals.get(r.metric)||0) + (Number(r.value)||0));
+      });
+      const data = Array.from(totals.entries())
+        .map(([metric,value])=>({metric, value}))
+        .sort((a,b)=>b.value-a.value)
+        .filter(x => x.metric.toLowerCase().includes((filterEl.value||'').toLowerCase()))
+        .slice(0,12);
+      leaderRows.innerHTML = data.map(d=>`<tr><td>${d.metric}</td><td style="text-align:right;">${Number(d.value).toLocaleString()}</td></tr>`).join('');
+    }
+
+  })();
+  </script>
+</body>
+</html>
